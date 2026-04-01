@@ -76,12 +76,11 @@ cp .env.example .env
 # Edit .env and set GEMINI_API_KEY
 cd backend
 
-# Build the RAG index
-python -m scripts.build_index
+# Build the RAG index (optional — auto-builds on first session if skipped)
+# python -m scripts.build_index
 
 # Start the server
 uvicorn main:app --reload
-```
 
 Server runs at `http://localhost:8000`. API docs at `http://localhost:8000/docs`.
 
@@ -101,14 +100,19 @@ App runs at `http://localhost:5173`.
 
 ```bash
 # 1. Copy the PDF into backend/forms/
-# 2. Run the introspection script
+
+# 2. Run the introspection script — generates the field schema JSON automatically
+#    (uses PyMuPDF + Gemini Vision to extract field names, labels, instructions)
 python -m scripts.introspect_form forms/your_form.pdf your_form_id
 
-# 3. Index the new form
-python -m scripts.build_index your_form_id
-
-# 4. Restart the backend — form appears automatically in GET /api/forms
+# 3. Restart the backend — form appears automatically in GET /api/forms
+#    The RAG index builds automatically on the first session for any new form
 ```
+
+> **In production** (main repo integration), steps 2 and 3 are fully automated —
+> the Airflow DAG runs `introspect_form` and indexes the form automatically
+> whenever the scraper detects a new or updated form on mass.gov.
+> See `docs/INTEGRATION_HANDOFF.md` for details.
 
 ---
 
