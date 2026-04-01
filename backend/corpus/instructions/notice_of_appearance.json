@@ -1,0 +1,174 @@
+{
+  "form_id": "notice_of_appearance",
+  "form_name": "Notice of Appearance",
+  "pdf_file": "notice_of_appearance.pdf",
+  "pdf_fill_mode": "acroform",
+  "case_name_targets": ["PlffField[0]", "DfdtField[0]"],
+  "acroform_field_map": {
+    "docket_number": "case[0]",
+    "court_department": "DeptRB[0]",
+    "court_division": "DivisionDrop[0]",
+    "appearance_type": "RadioButtonList[0]",
+    "attorney_for": "PartyNameField1[0]",
+    "full_name": "NameField[0]",
+    "bbo_number": "BBOField[0]",
+    "firm_name": "FirmField[0]",
+    "phone_office": "PhoneField[0]",
+    "street_address": "AddressField[0]",
+    "apt_unit": "AptField[0]",
+    "phone_mobile": "CellField[0]",
+    "city_town": "CityField[0]",
+    "state": "StateField[0]",
+    "zip_code": "ZipcodeField[0]",
+    "email": "EmailField[0]",
+    "date": "DateTextbox[0]"
+  },
+  "page_width": 612,
+  "page_height": 792,
+  "fields": [
+    {
+      "name": "docket_number",
+      "label": "Docket Number",
+      "type": "text",
+      "required": true,
+      "instructions": "Enter the docket number assigned to your case by the court. This is found on any court documents you have received.",
+      "rect": [272, 32, 390, 62]
+    },
+    {
+      "name": "case_name",
+      "label": "Case Name",
+      "type": "text",
+      "required": true,
+      "instructions": "Enter the full case name, typically in the format Plaintiff v. Defendant, exactly as it appears on your court documents.",
+      "rect": [18, 78, 320, 140]
+    },
+    {
+      "name": "court_department",
+      "label": "Court Department",
+      "type": "text",
+      "required": true,
+      "instructions": "Select the court department where your case is filed. Choose only one: Boston Municipal Court, District Court, Housing Court, Juvenile Court, Land Court, Probate and Family Court, or Superior Court.",
+      "rect": [325, 78, 595, 135]
+    },
+    {
+      "name": "court_division",
+      "label": "Court Division or County",
+      "type": "text",
+      "required": true,
+      "instructions": "Enter the specific division or county of the court, for example: Eastern Division, Suffolk County.",
+      "rect": [325, 140, 595, 175]
+    },
+    {
+      "name": "appearance_type",
+      "label": "Appearance Type",
+      "type": "text",
+      "required": true,
+      "instructions": "State whether you are appearing for yourself or as an attorney. If appearing as an attorney, provide the name of the person you represent.",
+      "rect": [18, 230, 595, 290]
+    },
+    {
+      "name": "attorney_for",
+      "label": "Attorney For (if applicable)",
+      "type": "text",
+      "required": false,
+      "instructions": "If you are an attorney, enter the full name of the client you represent.",
+      "rect": [139, 265, 585, 285]
+    },
+    {
+      "name": "full_name",
+      "label": "Full Name (First, Middle, Last)",
+      "type": "text",
+      "required": true,
+      "instructions": "Enter your full legal name in the order: first name, middle name or initial, last name.",
+      "rect": [18, 550, 410, 580]
+    },
+    {
+      "name": "bbo_number",
+      "label": "B.B.O. or State Bar Number",
+      "type": "text",
+      "required": false,
+      "instructions": "If you are an attorney, enter your Board of Bar Overseers number. Leave blank if you are not an attorney.",
+      "rect": [414, 550, 595, 580]
+    },
+    {
+      "name": "firm_name",
+      "label": "Firm or Agency Name",
+      "type": "text",
+      "required": false,
+      "instructions": "If you are filing on behalf of a law firm or agency, enter the full name here. Leave blank if not applicable.",
+      "rect": [18, 597, 410, 627]
+    },
+    {
+      "name": "phone_office",
+      "label": "Office or Home Phone Number",
+      "type": "text",
+      "required": true,
+      "instructions": "Enter your office or home phone number including area code, for example: 617-555-0123.",
+      "rect": [414, 597, 595, 627]
+    },
+    {
+      "name": "street_address",
+      "label": "Street Address",
+      "type": "text",
+      "required": true,
+      "instructions": "Enter your full street address including street number and street name.",
+      "rect": [18, 644, 358, 674]
+    },
+    {
+      "name": "apt_unit",
+      "label": "Apt / Unit Number",
+      "type": "text",
+      "required": false,
+      "instructions": "Enter your apartment or unit number if applicable.",
+      "rect": [360, 644, 412, 674]
+    },
+    {
+      "name": "phone_mobile",
+      "label": "Mobile Phone Number",
+      "type": "text",
+      "required": false,
+      "instructions": "Enter your mobile phone number including area code.",
+      "rect": [414, 644, 595, 674]
+    },
+    {
+      "name": "city_town",
+      "label": "City or Town",
+      "type": "text",
+      "required": true,
+      "instructions": "Enter the city or town of your address.",
+      "rect": [18, 691, 240, 721]
+    },
+    {
+      "name": "state",
+      "label": "State",
+      "type": "text",
+      "required": true,
+      "instructions": "Enter the two-letter state abbreviation, for example: MA for Massachusetts.",
+      "rect": [242, 691, 288, 721]
+    },
+    {
+      "name": "zip_code",
+      "label": "Zip Code",
+      "type": "text",
+      "required": true,
+      "instructions": "Enter your 5-digit zip code.",
+      "rect": [290, 691, 358, 721]
+    },
+    {
+      "name": "email",
+      "label": "E-mail Address",
+      "type": "text",
+      "required": false,
+      "instructions": "Enter your email address.",
+      "rect": [360, 691, 595, 721]
+    },
+    {
+      "name": "date",
+      "label": "Date",
+      "type": "date",
+      "required": true,
+      "instructions": "Enter today's date in month/day/year format.",
+      "rect": [18, 737, 238, 760]
+    }
+  ]
+}

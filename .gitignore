@@ -1,0 +1,40 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment
+.env
+*.env
+
+# ChromaDB — rebuild from corpus on each deployment
+chroma_db/
+
+# Test/scratch output files
+backend/test_output.pdf
+backend/_notice_filled.pdf
+backend/test_live_prompt.py
+backend/test_end_turn.py
+backend/check_rects.py
+
+# Node
+node_modules/
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
